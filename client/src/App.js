@@ -3,23 +3,33 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  state = {
+    point: ''
+  }
+
+
+  componentDidMount = () => {
+    fetch('./points/1', {
+      method: 'GET',
+    }).then(response => response.json())
+    .then(resp => this.setState({
+      point: resp
+    }))
+    // debugger
+  }
+
   render() {
+    const point = this.state.point
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+
+
         </header>
+        <p>
+          {point.name}
+        </p>
       </div>
     );
   }
