@@ -1,9 +1,10 @@
 gb34 = Point.create(name: 'Gallbladder 34', abb: 'Gb34', location: 'next to the had of the fibula', channel: 'Gallbladder')
 
+gb34.image.attach(io: File.open(Rails.root + 'app/assets/images/gb34.png'), filename: 'gb34.png', content_type: 'image/png')
 
+st36 = Point.create(name: 'Stomach 36', abb: 'St36', location: 'lateral to anterior crest of tibia', channel: 'Stomach')
 
-
-gb34.image.attach(io: File.open('/app/assets/images'), filename: 'gb34.png', content_type: 'image/png')
+st36.image.attach(io: File.open(Rails.root + 'app/assets/images/st36.png'), filename: 'st36.png', content_type: 'image/png')
 
 # foo = url_for(gb34.image)
 

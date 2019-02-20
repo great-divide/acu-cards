@@ -1,47 +1,29 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux'
-import {fetchPoints} from './actions/pointActions'
+
 import './App.css';
-import DashContainer from './containers/DashContainer'
+import PointsContainer from './containers/PointsContainer'
+import {
+  BrowserRouter as Router,
+  Route,
+  NavLink
+} from 'react-router-dom';
 
 
-class App extends Component {
 
-  componentDidMount() {
-    this.props.fetchPoints();
-  }
-  // state = {
-  //   point: ''
-  // }
-
-
-  // componentDidMount = () => {
-  //   fetch('./points/1', {
-  //     method: 'GET',
-  //   }).then(response => response.json())
-  //   .then(resp => this.setState({
-  //     point: resp
-  //   }))
-  // }
-
+export default class App extends Component {
 
 
   render() {
-    // const point = this.state.point
+
     return (
-      <div className="App">
-        <DashContainer />
-        <p>{this.state}</p>
-      </div>
+
+          <div className="App">
+            <PointsContainer />
+            
+          </div>
+
     );
   }
 }
 
-const mapStateToProps = state => {return {state}}
 
-const mapDispatchToProps = dispatch => {
-  return{
-    fetchPoints: () => dispatch(fetchPoints())
-  }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(App)

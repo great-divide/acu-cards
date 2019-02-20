@@ -9,8 +9,9 @@ export default function rootReducer(
 				return {...state, loading: true}
 
 			case 'FETCH_POINTS':
+			debugger
 				return {...state, loading: false, points: action.payload}
-				
+
 			default:
 				return state
 		}

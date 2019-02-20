@@ -5,7 +5,8 @@ import DashPoints from '../components/DashPoints'
 class DashContainer extends Component {
 
 	componentDidMount = () => {
-		console.log(this.props)
+
+		debugger
 	}
 
 	render() {
@@ -18,6 +19,6 @@ class DashContainer extends Component {
 	}
 }
 
-const mapStateToProps = ({ points }) => { return { points }}
 
-export default connect(mapStateToProps)(DashContainer)
+
+export default DashContainer
