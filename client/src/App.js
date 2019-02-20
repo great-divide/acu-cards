@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
 class App extends Component {
   state = {
     point: ''
@@ -18,6 +19,8 @@ class App extends Component {
     // debugger
   }
 
+
+
   render() {
     const point = this.state.point
     return (
@@ -30,6 +33,9 @@ class App extends Component {
         <p>
           {point.name}
         </p>
+        {point.abb}
+        <img src={point.image_url} alt='' />
+
       </div>
     );
   }

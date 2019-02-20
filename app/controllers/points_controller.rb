@@ -1,10 +1,23 @@
+require 'pry'
+
 class PointsController < ApplicationController
 
+
+
 	def show
-		@point = Point.find(params[:id])
+		@point = Point.with_attached_image.	find(params[:id])
+
+		@point.image_url = url_for(@point.image)
+
+		# binding.pry
 
 		render json: @point
+
+		# how to get image URL??????
+		# include: :image url_for(post.image) if post.image.attached?
 	end
+
+
 
 private
 	def point_params

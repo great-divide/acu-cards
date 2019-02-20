@@ -1,8 +1,11 @@
 gb34 = Point.create(name: 'Gallbladder 34', abb: 'Gb34', location: 'next to the had of the fibula', channel: 'Gallbladder')
 
 
-gb34.image.attach(io: File.open('./storage/gb34.png'), filename: 'gb34.png', content_type: 'image/png')
 
+
+gb34.image.attach(io: File.open('/app/assets/images'), filename: 'gb34.png', content_type: 'image/png')
+
+# foo = url_for(gb34.image)
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
