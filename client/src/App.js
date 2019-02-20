@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux'
+import {fetchPoints} from './actions/pointActions'
 import './App.css';
 import DashContainer from './containers/DashContainer'
 
 
 class App extends Component {
+
+  componentDidMount() {
+    this.props.fetchPoints();
+  }
   // state = {
   //   point: ''
   // }
@@ -31,4 +37,11 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => {return {state}}
+
+const mapDispatchToProps = dispatch => {
+  return{
+    fetchPoints: () => dispatch(fetchPoints())
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(App)

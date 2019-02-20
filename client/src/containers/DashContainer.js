@@ -2,14 +2,22 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import DashPoints from '../components/DashPoints'
 
-export default class DashContainer extends Component {
+class DashContainer extends Component {
+
+	componentDidMount = () => {
+		console.log(this.props)
+	}
 
 	render() {
 		return(
 			<div>
 				Dash Container!
-				<DashContainer />
+
 			</div>
 		)
 	}
 }
+
+const mapStateToProps = ({ points }) => { return { points }}
+
+export default connect(mapStateToProps)(DashContainer)
