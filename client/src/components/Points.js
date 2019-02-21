@@ -9,7 +9,6 @@ class Points extends Component {
     return filteredPoints.map((p, index) =>
   
         <Point point={p} key={index} id={p.abb}/>
-
     )
   }
 

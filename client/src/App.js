@@ -17,15 +17,11 @@ export default class App extends Component {
   render() {
 
     return (
-   
-          <div className="App">
-
-            <PointsContainer />
-            
-            
-
-          </div>
-
+      <Router>
+        <div className="App">
+          <PointsContainer />
+        </div>
+      </Router>
     );
   }
 }

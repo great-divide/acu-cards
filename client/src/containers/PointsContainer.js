@@ -17,25 +17,9 @@ class PointsContainer extends Component {
 
   }
 
-  handleClick = (event) => {
-  	// debugger
-  	event.preventDefault();
-  	console.log(event.target.name)
-  	
-  }
-
-  renderPoints = () => {
-  	return this.props.state.points.map((p, index) =>
-  		<div key={index}>
-	  		<p>{p.name}</p>
-	  		<img src={p.image_url} alt='' />
-			</div>
-  	)
-  }
-
 	render(){
 		return(
-			<Router>
+			
 			<div>
 				Choose a Channel
 				<br/>
@@ -46,7 +30,7 @@ class PointsContainer extends Component {
 					<Route exact path="/st" render={() => <Points name="Stomach" points={this.props.state.points}/>} />
 
 			</div>
-			</Router>
+			
 		)
 	}
 }
