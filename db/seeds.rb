@@ -1,4 +1,4 @@
-gb34 = Point.create(name: 'Gallbladder 34', abb: 'Gb34', location: 'next to the had of the fibula', channel: 'Gallbladder')
+gb34 = Point.create(name: 'Gallbladder 34', abb: 'Gb34', location: 'next to the head of the fibula', channel: 'Gallbladder')
 gb34.image.attach(io: File.open(Rails.root + 'app/assets/images/gb34.png'), filename: 'gb34.png', content_type: 'image/png')
 
 gb33 = Point.create(name: 'Gallbladder 33', abb: 'Gb33', location: 'in the depression above the lateral epicondyle of the 

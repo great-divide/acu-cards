@@ -21,7 +21,7 @@ class PointsContainer extends Component {
 			<div>
 				Choose a Channel
 				<br/>
-
+					<Button variant="light" href="/">Home</Button>
 					<Button variant="outline-success" name='Gallbladder' href="/gb" >Gallbladder</Button>
 					<Button variant="outline-warning" name='Stomach' href="/st">Stomach</Button>
 					<Route exact path="/gb" render={() => <Channel name="Gallbladder" points={this.props.state.points}/>} />

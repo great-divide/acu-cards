@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import About from './components/About'
 import './App.css';
 import ChannelsContainer from './containers/ChannelsContainer'
 import {
@@ -8,7 +8,7 @@ import {
   NavLink,
   NavBar
 } from 'react-router-dom';
-// import Channel from './components/Channel'
+
 
 
 
@@ -20,9 +20,11 @@ export default class App extends Component {
     return (
       <Router>
         <div className="App">
-        <Route exact path="/points/home">
-          <ChannelsContainer />
-          </Route>
+          <React.Fragment>
+            <Route exact path="/points/home" />
+            <Route exact path="/about" component={About} />
+            <ChannelsContainer />
+          </React.Fragment>
         </div>
       </Router>
     );

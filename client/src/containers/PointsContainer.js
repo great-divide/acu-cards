@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PointFront from '../components/PointFront'
 import PointBack from '../components/PointBack'
-// import { connect } from 'react-redux';
-
+import Button from 'react-bootstrap/Button';
 
 class PointsContainer extends Component {
 	state = {
@@ -18,12 +17,12 @@ class PointsContainer extends Component {
 	render() {
 		return(
 			<div>
-				<button onClick={ this.toggle }> Show/Hide Back </button>
+				<Button variant="light" onClick={ this.toggle }> Show/Hide Back </Button>
 				{this.state.front ? (<PointFront point={this.props.point}/>) : (<PointBack point={this.props.point} />)}
 			</div>
 		)
 	}
 }
 
-
 export default PointsContainer
+
