@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import PointsContainer from './containers/PointsContainer'
+import ChannelsContainer from './containers/ChannelsContainer'
 import {
   BrowserRouter as Router,
   Route,
-  NavLink
+  NavLink,
+  NavBar
 } from 'react-router-dom';
-import Points from './components/Points'
+// import Channel from './components/Channel'
 
 
 
@@ -19,7 +20,9 @@ export default class App extends Component {
     return (
       <Router>
         <div className="App">
-          <PointsContainer />
+        <Route exact path="/points/home">
+          <ChannelsContainer />
+          </Route>
         </div>
       </Router>
     );
