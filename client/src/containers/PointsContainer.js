@@ -18,15 +18,12 @@ class PointsContainer extends Component {
 	render() {
 		return(
 			<div>
-				PointsContainer
-	
-				<button onClick={ this.toggle }> Toggle </button>
+				<button onClick={ this.toggle }> Show/Hide Back </button>
 				{this.state.front ? (<PointFront point={this.props.point}/>) : (<PointBack point={this.props.point} />)}
 			</div>
 		)
 	}
 }
-
 
 
 export default PointsContainer

@@ -2,7 +2,7 @@ export default function rootReducer(
 	state = {
 		loading: false,
 		points: [],
-		prescriptions: []
+		// prescriptions: []
 	}, action) {
 		switch (action.type) {
 			case 'LOADING_POINTS':
