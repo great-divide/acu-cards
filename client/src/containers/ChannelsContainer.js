@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {fetchPoints} from '../actions/pointActions'
+import {fetchChannels} from '../actions/channelActions'
 import Channel from '../components/Channel'
 import Button from 'react-bootstrap/Button';
 import {
@@ -10,8 +10,8 @@ import {
 
 class ChannelsContainer extends Component {
 
-  componentDidMount() {
-    this.props.fetchPoints();
+  componentWillMount() {
+    this.props.fetchChannels();
   }
 
 	render(){
@@ -36,7 +36,7 @@ const mapStateToProps = state => {return {state}}
 
 const mapDispatchToProps = dispatch => {
   return{
-    fetchPoints: () => dispatch(fetchPoints())
+    fetchChannels: () => dispatch(fetchChannels())
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(ChannelsContainer)
