@@ -19,9 +19,9 @@ class PointsContainer extends Component {
 		return(
 			<div>
 				PointsContainer
-				{this.props.point.name}
+	
 				<button onClick={ this.toggle }> Toggle </button>
-				{this.state.front ? (<PointFront />) : (<PointBack />)}
+				{this.state.front ? (<PointFront point={this.props.point}/>) : (<PointBack point={this.props.point} />)}
 			</div>
 		)
 	}

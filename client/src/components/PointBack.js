@@ -4,8 +4,8 @@ import React from 'react';
 
 const PointBack = (props) =>
 	<div>
-
-		<h4>this is a point back component</h4> 
+		<img src={props.point.image_url}/>		
+		<h4>{props.point.location}</h4> 
 
 	</div>
 
