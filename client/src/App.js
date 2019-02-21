@@ -3,7 +3,6 @@ import About from './components/About'
 import './App.css';
 import ChannelsContainer from './containers/ChannelsContainer'
 import {
-  BrowserRouter as Router,
   Route,
   NavLink,
   NavBar
@@ -18,7 +17,7 @@ export default class App extends Component {
   render() {
 
     return (
-      <Router>
+
         <div className="App">
           <React.Fragment>
             <Route exact path="/points/home" />
@@ -26,7 +25,7 @@ export default class App extends Component {
             <ChannelsContainer />
           </React.Fragment>
         </div>
-      </Router>
+
     );
   }
 }

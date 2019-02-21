@@ -3,13 +3,12 @@ import { connect } from 'react-redux';
 import {fetchPoints} from '../actions/pointActions'
 import Channel from '../components/Channel'
 import Button from 'react-bootstrap/Button';
-// import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import {
   Route,
   NavLink
 } from 'react-router-dom';
 
-class PointsContainer extends Component {
+class ChannelsContainer extends Component {
 
   componentDidMount() {
     this.props.fetchPoints();
@@ -40,4 +39,4 @@ const mapDispatchToProps = dispatch => {
     fetchPoints: () => dispatch(fetchPoints())
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(PointsContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(ChannelsContainer)
