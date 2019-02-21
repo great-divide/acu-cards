@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-// import PointFront from './PointFront'
-// import PointBack from './PointBack'
+
 import PointsContainer from '../containers/PointsContainer'
 
 // import Pagination from 'react-bootstrap/Pagination'

@@ -5,7 +5,7 @@ import React from 'react';
 const PointFront = (props) =>
 	<div>
 
-		<h4>{props.point.name} this is a point front component</h4> 
+		<h4> this is a point front component</h4> 
 
 	</div>
 

@@ -5,7 +5,7 @@ import React from 'react';
 const PointBack = (props) =>
 	<div>
 
-		<h4>{props.point.abb} this is a point back component</h4> 
+		<h4>this is a point back component</h4> 
 
 	</div>
 
