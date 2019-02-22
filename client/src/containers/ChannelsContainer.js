@@ -37,7 +37,7 @@ class ChannelsContainer extends Component {
 
 	renderPoints() {
 		const points = this.state.currentPoints
-		debugger
+		// debugger
 		return points.map((p, index) => <PointsContainer point={p} key={index} />
 		)
 	}
@@ -46,7 +46,7 @@ class ChannelsContainer extends Component {
 		return(		
 			<div>
 				<ChannelMenu channels={this.props.state.channels} selectPoints={ this.selectPoints } />
-				{this.renderPoints}
+				{this.renderPoints()}
 			</div>
 		)
 	}
