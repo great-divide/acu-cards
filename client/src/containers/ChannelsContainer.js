@@ -4,6 +4,7 @@ import {fetchChannels} from '../actions/channelActions'
 import {fetchPoints} from '../actions/pointActions'
 import Channel from '../components/Channel'
 import ChannelMenu from '../components/ChannelMenu'
+import PointsContainer from './PointsContainer'
 
 import {
   Route,
@@ -14,7 +15,12 @@ class ChannelsContainer extends Component {
 	constructor() {
 		super();
 
+		this.state = {
+			currentPoints: []
+		}
+
 		this.selectPoints = this.selectPoints.bind(this)
+		this.renderPoints = this.renderPoints.bind(this)
 	}
 
   componentWillMount() {
@@ -25,16 +31,23 @@ class ChannelsContainer extends Component {
   selectPoints(channelId) {
 		const currentChannel = this.props.state.channels.find(function(channel) {return channel.id === channelId});
 		const currentPoints = this.props.state.points.filter(points => points.channel_id === channelId)
-		console.log(currentPoints)
+		this.setState({currentPoints: currentPoints})
+
+	}
+
+	renderPoints() {
+		const points = this.state.currentPoints
+		debugger
+		return points.map((p, index) => <PointsContainer point={p} key={index} />
+		)
 	}
 
 	render(){
-		return(
-			
+		return(		
 			<div>
 				<ChannelMenu channels={this.props.state.channels} selectPoints={ this.selectPoints } />
+				{this.renderPoints}
 			</div>
-			
 		)
 	}
 }
@@ -49,6 +62,13 @@ const mapDispatchToProps = dispatch => {
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(ChannelsContainer)
+
+  // renderPoints = () => {
+  //   let filteredPoints = this.props.points.filter(el => el.channel === this.props.name)
+  //   return filteredPoints.map((p, index) => 
+  //     <PointsContainer point={p} key={index} />
+  //   )
+  // }
 
 					// <Button variant="outline-success" name='Gallbladder' href="/gb" >Gallbladder</Button>
 					// <Button variant="outline-warning" name='Stomach' href="/st">Stomach</Button>
