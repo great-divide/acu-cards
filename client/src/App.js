@@ -7,23 +7,23 @@ import {
   NavLink,
   NavBar
 } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';  
 
 
 
 
 export default class App extends Component {
+  // constructor() {
+  //   super();
 
+  // }
 
   render() {
 
     return (
 
         <div className="App">
-          <React.Fragment>
-            <Route exact path="/points/home" />
-            <Route exact path="/about" component={About} />
-            <ChannelsContainer />
-          </React.Fragment>
+          <ChannelsContainer />
         </div>
 
     );
