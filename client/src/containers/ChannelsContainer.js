@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {fetchChannels} from '../actions/channelActions'
 import {fetchPoints} from '../actions/pointActions'
-import Channel from '../components/Channel'
+
 import ChannelMenu from '../components/ChannelMenu'
 import PointsContainer from './PointsContainer'
 
@@ -29,7 +29,7 @@ class ChannelsContainer extends Component {
   }
 
   selectPoints(channelId) {
-		const currentChannel = this.props.state.channels.find(function(channel) {return channel.id === channelId});
+		// const currentChannel = this.props.state.channels.find(function(channel) {return channel.id === channelId});
 		const currentPoints = this.props.state.points.filter(points => points.channel_id === channelId)
 		this.setState({currentPoints: currentPoints})
 
