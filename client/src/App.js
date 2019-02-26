@@ -1,31 +1,22 @@
 import React, { Component } from 'react';
-import About from './components/About'
 import './App.css';
 import ChannelsContainer from './containers/ChannelsContainer'
-import {
-  Route,
-  NavLink,
-  NavBar
-} from 'react-router-dom';
-import Button from 'react-bootstrap/Button';  
-
-
-
+import About from './components/About'
+import {Route} from 'react-router-dom';
+import NavBar from './components/NavBar'
 
 export default class App extends Component {
-  // constructor() {
-  //   super();
-
-  // }
 
   render() {
-
     return (
-
         <div className="App">
-          <ChannelsContainer />
+          <header> 
+            <h2>Welcome to Acu Cards!</h2>
+          </header>
+          <NavBar />
+          <Route exact path='/channels' component={ChannelsContainer} />
+          <Route exact path='/about' component={About} />
         </div>
-
     );
   }
 }
