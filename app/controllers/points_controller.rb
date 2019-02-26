@@ -1,4 +1,3 @@
-require 'pry'
 
 class PointsController < ApplicationController
 
@@ -16,8 +15,6 @@ class PointsController < ApplicationController
 		@point = Point.with_attached_image.find(params[:id])
 
 		@point.image_url = url_for(@point.image)
-
-		# binding.pry
 
 		render json: @point
 
