@@ -16,4 +16,4 @@ This is an extremely basic (ugly) skeleton of the essential concept. Future vers
 1. Point prescriptions in additon to point locations
 2. User Auth
 3. Quiz Mode -- built in spaced repetition for return Users (using SuperMemo). This would require three buttons to be added to the flashcards, where the User can input "don't know/sort of know/know" when prompted.
-4. Improved visual design
+4. Improved visual design, including fluid image sizing on the flashcard backs
