@@ -19,7 +19,7 @@ export default class App extends Component {
               <NavBar />
                 <Route exact path='/channels' component={ChannelsContainer} />
                 <Route exact path='/about' component={About} />
-                <Route exact path='/home' component={Home} />
+                <Route exact path='/' component={Home} />
             </React.Fragment>
           </Router>
         </div>

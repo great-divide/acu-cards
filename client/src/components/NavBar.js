@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav'
 const NavBar = () => 
 
 		<Navbar sticky="top" bg="light" variant="light">
-			<Nav.Link href="/home">Home</Nav.Link>
+			<Nav.Link href="/">Home</Nav.Link>
 			<Nav.Link href="/about">About</Nav.Link>
 			<Nav.Link href="/channels">Channels</Nav.Link>			
 		</Navbar>
