@@ -47,6 +47,15 @@ sp3.image.attach(io: File.open(Rails.root + 'app/assets/images/sp3.png'), filena
 sp21 = Point.create(name: 'Spleen 21', abb: 'Sp21', location: 'on the axillary midline in the 7th intercostal space')
 sp21.image.attach(io: File.open(Rails.root + 'app/assets/images/sp21.png'), filename: 'sp21.png', content_type: 'image/png')
 
+ht9 = Point.create(name: 'Heart 9', abb: 'Ht9', location: 'medial corner of little fingernail')
+ht9.image.attach(io: File.open(Rails.root + 'app/assets/images/ht9.png'), filename: 'ht9.png', content_type: 'image/png')
+
+ht8 = Point.create(name: 'Heart 8', abb: 'Ht8', location: 'on the palm in depression between 4th and 5th metacarpal bones')
+ht8.image.attach(io: File.open(Rails.root + 'app/assets/images/ht8.png'), filename: 'ht8.png', content_type: 'image/png')
+
+
+
+
 # attach points to corresponding channels
 gb34.channel_id = gb.id
 gb34.save
@@ -74,3 +83,8 @@ sp3.channel_id = sp.id
 sp3.save
 sp21.channel_id = sp.id
 sp21.save
+
+ht8.channel_id = ht.id
+ht8.save
+ht9.channel_id = ht.id
+ht9.save
