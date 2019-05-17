@@ -5,6 +5,7 @@ st = Channel.create(name: 'Stomach', abb: 'St')
 gb = Channel.create(name: 'Gallbladder', abb: 'Gb')
 sp = Channel.create(name: 'Spleen', abb: 'Sp')
 ht = Channel.create(name: 'Heart', abb: 'Ht')
+si = Channel.create(name: 'Small Intesting', abb: 'Si')
 
 # create two test-points for each channel
 lu7 = Point.create(name: 'Lung 7', abb: 'Lu7', location: 'On the radial aspect of the forearm, approximately 1.5 cun
@@ -53,7 +54,14 @@ ht9.image.attach(io: File.open(Rails.root + 'app/assets/images/ht9.png'), filena
 ht8 = Point.create(name: 'Heart 8', abb: 'Ht8', location: 'on the palm in depression between 4th and 5th metacarpal bones')
 ht8.image.attach(io: File.open(Rails.root + 'app/assets/images/ht8.png'), filename: 'ht8.png', content_type: 'image/png')
 
+si8 = Point.create(name: 'Small Intestine', abb: 'Si8', location: '')
+si8.image.attach(io: File.open(Rails.root + 'app/assets/images/si8.png'), filename: 'si8.png', content_type: 'image/png')
 
+si8 = Point.create(name: 'Small Intestine 8', abb: 'Si8', location: 'depression to the medial side of olecranon process')
+si8.image.attach(io: File.open(Rails.root + 'app/assets/images/si8.png'), filename: 'si8.png', content_type: 'image/png')
+
+si9 = Point.create(name: 'Small Intestine 9', abb: 'Si9', location: '1 cun above posterior axillary crease')
+si9.image.attach(io: File.open(Rails.root + 'app/assets/images/si9.png'), filename: 'si9.png', content_type: 'image/png')
 
 
 # attach points to corresponding channels
