@@ -2,8 +2,8 @@
 lu = Channel.create(name: 'Lung', abb: 'Lu')
 li = Channel.create(name: 'Large Intestine', abb: 'Li')
 st = Channel.create(name: 'Stomach', abb: 'St')
-# sp = Channel.create(name: 'Spleen', abb: 'Sp')
 gb = Channel.create(name: 'Gallbladder', abb: 'Gb')
+sp = Channel.create(name: 'Spleen', abb: 'Sp')
 
 # create two test-points for each channel
 lu7 = Point.create(name: 'Lung 7', abb: 'Lu7', location: 'On the radial aspect of the forearm, approximately 1.5 cun
@@ -37,6 +37,14 @@ gb33 = Point.create(name: 'Gallbladder 33', abb: 'Gb33', location: 'in the depre
 femur, between the femur and tendon of biceps femoris')
 gb33.image.attach(io: File.open(Rails.root + 'app/assets/images/gb33.png'), filename: 'gb33.png', content_type: 'image/png')
 
+sp6 = Point.create(name: 'Spleen 6', abb: 'Sp6', location: '3 cun superior to the medial malleolus')
+sp6.image.attach(io: File.open(Rails.root + 'app/assets/images/sp6.png'), filename: 'sp6.png', content_type: 'image/png')
+
+sp3 = Point.create(name: 'Spleen 3', abb: 'Sp3', location: 'in the depression distal and inferior to the first metatarso-phalangeal joint')
+sp3.image.attach(io: File.open(Rails.root + 'app/assets/images/sp3.png'), filename: 'sp3.png', content_type: 'image/png')
+
+sp21 = Point.create(name: 'Spleen 21', abb: 'Sp21', location: 'on the axillary midline in the 7th intercostal space')
+sp21.image.attach(io: File.open(Rails.root + 'app/assets/images/sp21.png'), filename: 'sp21.png', content_type: 'image/png')
 
 # attach points to corresponding channels
 gb34.channel_id = gb.id
