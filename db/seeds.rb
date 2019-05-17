@@ -96,3 +96,8 @@ ht8.channel_id = ht.id
 ht8.save
 ht9.channel_id = ht.id
 ht9.save
+
+si8.channel_id = si.id
+si8.save
+si9.channel_id = si.id
+si9.save
