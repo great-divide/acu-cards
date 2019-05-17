@@ -4,6 +4,7 @@ li = Channel.create(name: 'Large Intestine', abb: 'Li')
 st = Channel.create(name: 'Stomach', abb: 'St')
 gb = Channel.create(name: 'Gallbladder', abb: 'Gb')
 sp = Channel.create(name: 'Spleen', abb: 'Sp')
+ht = Channel.create(name: 'Heart', abb: 'Ht')
 
 # create two test-points for each channel
 lu7 = Point.create(name: 'Lung 7', abb: 'Lu7', location: 'On the radial aspect of the forearm, approximately 1.5 cun
@@ -66,3 +67,10 @@ li4.channel_id = li.id
 li4.save
 li11.channel_id = li.id
 li11.save
+
+sp6.channel_id = sp.id
+sp6.save
+sp3.channel_id = sp.id
+sp3.save
+sp21.channel_id = sp.id
+sp21.save
