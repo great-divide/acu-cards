@@ -1,3 +1,6 @@
+// using this blog post (but not tailwind)
+// https://auth0.com/blog/build-a-react-application-using-rxjs/
+
 // import auth0 from 'auth0-js';
 // import { config } from './config';
 
