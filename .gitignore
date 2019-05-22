@@ -26,4 +26,4 @@
 /config/master.key
 
 # Ignore Auth0 config
-/client/src/auth/config.js
+/client/src/Auth/config.js
